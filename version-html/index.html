@@ -19,25 +19,27 @@
 <body>
     <div id="app">
         <header>
-            <h1>Header</h1>
+            <h1>LOGO</h1>
         </header>
 
         <main>
-            <h1>Lista dei dischi</h1>
-    
-            <div v-for="cd in discs">
-                <ul>
-                    <li>Indirizzo Immagine: {{ cd.poster }}  </li>
-                    <li>Titolo: {{ cd.title }} </li>
-                    <li>Autore: {{ cd.author }}</li>
-                    <li>Anno: {{ cd.year }} </li>
-                </ul>
-                <br>
+            <div class="container">
+                <div class="containerCards">
+                    <div class="card_disc" v-for="cd in discs">
+                        <div class="box_image">
+                            <img :src="cd.poster" 
+                            :alt="`Poster ${cd.title}-${cd.author}-${cd.year}`"/>
+                        </div>
+            
+                        <div class="box_info">
+                            <h4> {{ cd.title }} </h4>
+                            <h6> {{ cd.author }} </h6>
+                            <h6> {{ cd.year }} </h6>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
-    
         </main>
-
 
     </div>
 
