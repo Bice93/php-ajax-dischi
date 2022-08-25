@@ -8,6 +8,9 @@
     <title>PHP Dischi</title>
 </head>
 <body>
+    <?php
+        include '../db.php';
+    ?>
     <header>
         <h1>HEADER</h1>
     </header>
@@ -16,11 +19,17 @@
         <h1>Lista dei dischi</h1>
 
         <div>
+            <?php foreach($discsList as $disc){ ?>
+        </div>
             <ul>
-                <li>Titolo:</li>
-                <li>Autore:</li>
-                <li>Anno:</li>
+                <li>Indirizzo Immagine: <?php echo $disc['poster'] ?> </li>
+                <li>Titolo: <?php echo $disc['title'] ?></li>
+                <li>Autore: <?php echo $disc['author'] ?></li>
+                <li>Anno: <?php echo $disc['year'] ?></li>
             </ul>
+            <br>
+        <div>
+            <?php } ?>
         </div>
     </main>
 </body>
