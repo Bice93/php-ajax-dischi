@@ -24,18 +24,20 @@
 
         <main>
             <h1>Lista dei dischi</h1>
-
-            <div>
+    
+            <div v-for="cd in discs">
                 <ul>
-                    <li>Indirizzo Immagine: </li>
-                    <li>Titolo: </li>
-                    <li>Autore:</li>
-                    <li>Anno: </li>
+                    <li>Indirizzo Immagine: {{ cd.poster }}  </li>
+                    <li>Titolo: {{ cd.title }} </li>
+                    <li>Autore: {{ cd.author }}</li>
+                    <li>Anno: {{ cd.year }} </li>
                 </ul>
+                <br>
             </div>
-
-
+    
+    
         </main>
+
 
     </div>
 
